@@ -1,5 +1,19 @@
+buildscript {
+    ext.bgbillingKernelVersion = '8.0_1352'
+}
+
 plugins {
     id 'java-library-distribution'
+}
+
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    compileOnly name: "bgbilling-kernel-$bgbillingKernelVersion"
 }
 
 jar {
