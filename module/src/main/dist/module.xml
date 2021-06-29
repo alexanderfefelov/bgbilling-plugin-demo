@@ -5,7 +5,7 @@
             type="plugin"
             name="com.github.alexanderfefelov.bgbilling.plugin.demo"
             pack_server="none"
-            pack_client="com.github.alexanderfefelov.bgbilling.plugin.demo">
+            pack_client="com.github.alexanderfefelov.bgbilling.plugin.demo.client">
         <vendor>Alexander Fefelov</vendor>
         <title>Demo</title>
         <title lang="ru">Демо</title>
@@ -13,5 +13,6 @@
         <description lang="ru">Демонстрационный плагин для BGBilling</description>
     </information>
     <resources>
+        <call class="PutFile" param="com.github.alexanderfefelov.bgbilling.plugin.demo.xml:actions" />
     </resources>
 </module>

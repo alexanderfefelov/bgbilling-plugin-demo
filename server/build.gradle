@@ -1,0 +1,14 @@
+plugins {
+    id 'java-library-distribution'
+}
+
+jar {
+    baseName = rootProject.name
+}
+
+distZip {
+    eachFile { file ->
+        String path = file.relativePath
+        file.setPath(path.substring(path.indexOf('/') + 1, path.length()))
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.github.alexanderfefelov.bgbilling.plugin.demo"
+        name="Demo"
+        version="42">
+
+    <extension point="bitel.billing.server.admin.action.ActionMenuAndToolBar">
+        <menu id="plugin">
+            <menuItem id="demo_main"
+                      className="com.github.alexanderfefelov.bgbilling.plugin.demo.client.Main"
+                      title="Демо"/>
+        </menu>
+    </extension>
+
+</plugin>
