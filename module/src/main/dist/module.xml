@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+    <information
+            version="3.5"
+            type="plugin"
+            name="com.github.alexanderfefelov.bgbilling.plugin.demo"
+            pack_server="none"
+            pack_client="com.github.alexanderfefelov.bgbilling.plugin.demo">
+        <vendor>Alexander Fefelov</vendor>
+        <title>Demo</title>
+        <title lang="ru">Демо</title>
+        <description>Demo plugin for BGBilling</description>
+        <description lang="ru">Демонстрационный плагин для BGBilling</description>
+    </information>
+    <resources>
+    </resources>
+</module>

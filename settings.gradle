@@ -1,0 +1,3 @@
+rootProject.name = 'bgbilling-plugin-demo'
+
+include('client', 'module')

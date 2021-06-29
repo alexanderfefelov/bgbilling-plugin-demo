@@ -1,0 +1,21 @@
+plugins {
+    id 'distribution'
+}
+
+project.version = '8.0_1'
+
+distributions {
+    main {
+        contents {
+            from project(':client').distZip
+        }
+    }
+}
+
+distZip {
+    baseName rootProject.name
+    eachFile { file ->
+        String path = file.relativePath
+        file.setPath(path.substring(path.indexOf('/') + 1, path.length()))
+    }
+}
