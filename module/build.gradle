@@ -7,16 +7,16 @@ project.version = '8.0_1'
 distributions {
     main {
         contents {
-            from { project(':client').distZip }
-            from { project(':server').distZip }
+            from { project ':client' distZip }
+            from { project ':server' distZip }
         }
     }
 }
 
 distZip {
-    baseName rootProject.name
-    eachFile { file ->
-        String path = file.relativePath
-        file.setPath(path.substring(path.indexOf('/') + 1, path.length()))
+    archiveBaseName = rootProject.name
+    eachFile {
+        path = it.relativePath
+        it.setPath(path.substring(path.indexOf('/') + 1, path.length()))
     }
 }

@@ -17,12 +17,12 @@ dependencies {
 }
 
 jar {
-    baseName = rootProject.name
+    archiveBaseName = rootProject.name
 }
 
 distZip {
-    eachFile { file ->
-        String path = file.relativePath
-        file.setPath(path.substring(path.indexOf('/') + 1, path.length()))
+    eachFile {
+        path = it.relativePath
+        it.setPath(path.substring(path.indexOf('/') + 1, path.length()))
     }
 }
