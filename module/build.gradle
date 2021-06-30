@@ -2,7 +2,7 @@ plugins {
     id 'distribution'
 }
 
-project.version = '8.0_1'
+project.version = gradle.ext.pluginVersion + '_' + gradle.ext.pluginBuildNumber
 
 distributions {
     main {
