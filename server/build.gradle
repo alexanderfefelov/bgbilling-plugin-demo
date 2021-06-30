@@ -14,6 +14,7 @@ repositories {
     flatDir {
         dirs 'lib'
     }
+    mavenCentral()
 }
 
 configurations {
@@ -21,6 +22,7 @@ configurations {
 }
 
 dependencies {
+    compileOnly group: 'log4j', name: 'log4j', version: '1.2.17'
     compileOnly project(':common')
     compileOnly name: "bgbilling-kernel-$bgbillingKernelVersion"
     fatJar project(':common')
