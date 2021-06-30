@@ -29,6 +29,12 @@ dependencies {
 jar {
     archiveBaseName = rootProject.name
 
+    manifest {
+        attributes 'Implementation-Title': gradle.ext.pluginId
+        attributes 'Implementation-Version': gradle.ext.pluginVersion + '_' + gradle.ext.pluginBuildNumber
+        attributes 'Implementation-Vendor': gradle.ext.pluginVendor
+    }
+
     from {
         configurations.fatJar.collect { it.isDirectory() ? it : zipTree(it) }
     }
