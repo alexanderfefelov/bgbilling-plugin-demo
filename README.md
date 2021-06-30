@@ -2,7 +2,7 @@
 
 ## Что это?
 
-bgbilling-plugin-demo — это демонстрационный плагин для использования совместно с сервером [BGBilling](https://bgbilling.ru/).
+bgbilling-plugin-demo — это демонстрационный плагин для [BGBilling](https://bgbilling.ru/).
 
 ![Скриншот 1](doc/assets/screenshot1.png)
 
