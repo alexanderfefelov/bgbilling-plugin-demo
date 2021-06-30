@@ -19,7 +19,7 @@ public class ScriptEventTypeDAO {
 
     public List<ScriptEventType> findAll() throws SQLException {
         List<ScriptEventType> result = new ArrayList<>();
-        String query = "select * from script_vent_type";
+        String query = "select * from script_event_type";
         try (Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
