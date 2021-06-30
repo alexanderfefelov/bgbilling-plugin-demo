@@ -7,4 +7,4 @@ gradle.ext {
     pluginBuildTime = java.time.LocalDateTime.now()
 }
 
-include 'client', 'module', 'server'
+include 'client', 'common', 'module', 'server'

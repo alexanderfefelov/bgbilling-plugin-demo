@@ -16,26 +16,22 @@ repositories {
     }
 }
 
+configurations {
+    fatJar
+}
+
 dependencies {
+    compileOnly project(':common')
     compileOnly name: "bgbilling-client-$bgbillingClientVersion"
-}
-
-tasks.register('createVersionProperties', WriteProperties) {
-    def targetDir = "$buildDir/resources/main/ru/bitel/bgbilling/properties"
-    mkdir targetDir
-    outputFile = file "$targetDir/${gradle.ext.pluginId}.properties"
-    property 'name', gradle.ext.pluginId
-    property 'version', gradle.ext.pluginVersion
-    property 'build.number', gradle.ext.pluginBuildNumber
-    property 'build.time', gradle.ext.pluginBuildTime
-}
-
-processResources {
-    dependsOn createVersionProperties
+    fatJar project(':common')
 }
 
 jar {
     archiveBaseName = rootProject.name
+
+    from {
+        configurations.fatJar.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 distZip {
