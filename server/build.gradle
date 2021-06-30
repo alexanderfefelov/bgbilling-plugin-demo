@@ -6,6 +6,10 @@ plugins {
     id 'java-library-distribution'
 }
 
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
 repositories {
     flatDir {
         dirs 'lib'
