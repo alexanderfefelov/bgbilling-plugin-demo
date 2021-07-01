@@ -2,7 +2,7 @@ rootProject.name = 'bgbilling-plugin-demo'
 
 gradle.ext {
     pluginId = 'com.github.alexanderfefelov.bgbilling.plugin.demo'
-    pluginVersion = '8.0'
+    pluginVersion = '1.0'
     pluginVendor = 'Alexander Fefelov <alexanderfefelov@yandex.ru>'
     pluginBuildNumber = 'git rev-parse --short HEAD'.execute().getText().trim()
     pluginBuildTime = java.time.LocalDateTime.now()
