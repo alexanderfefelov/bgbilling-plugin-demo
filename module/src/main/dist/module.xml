@@ -4,7 +4,7 @@
             version="3.5"
             type="plugin"
             name="com.github.alexanderfefelov.bgbilling.plugin.demo"
-            pack_server="none"
+            pack_server="com.github.alexanderfefelov.bgbilling.plugin.demo.server"
             pack_client="com.github.alexanderfefelov.bgbilling.plugin.demo.client">
         <vendor>Alexander Fefelov</vendor>
         <title>Demo</title>

@@ -1,11 +1,11 @@
 package com.github.alexanderfefelov.bgbilling.plugin.demo.common.model;
 
 public class ScriptEventType {
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -17,11 +17,11 @@ public class ScriptEventType {
         this.moduleId = moduleId;
     }
 
-    public int getEventMode() {
+    public Integer getEventMode() {
         return eventMode;
     }
 
-    public void setEventMode(int eventMode) {
+    public void setEventMode(Integer eventMode) {
         this.eventMode = eventMode;
     }
 
@@ -41,9 +41,9 @@ public class ScriptEventType {
         this.title = title;
     }
 
-    private long id;
+    private Long id;
     private String moduleId;
-    private int eventMode;
+    private Integer eventMode;
     private String eventId;
     private String title;
 }

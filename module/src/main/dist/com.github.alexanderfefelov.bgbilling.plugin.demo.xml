@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
+    <group title="Script Event Type">
+        <action id="1" mask="module=com.github.alexanderfefelov.bgbilling.plugin.demo;action=ScriptEventTypeFindAll"
+                title="Найти все"/>
+    </group>
 </actions>

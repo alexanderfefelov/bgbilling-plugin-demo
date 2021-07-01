@@ -18,10 +18,9 @@ public class ScriptEventTypeDAO {
     }
 
     public List<ScriptEventType> findAll() throws SQLException {
-        List<ScriptEventType> result = new ArrayList<>();
-        String query = "select * from script_event_type";
+        List<ScriptEventType> list = new ArrayList<>();
         try (Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(query);
+            ResultSet resultSet = statement.executeQuery(QUERY_FIND_ALL);
             while (resultSet.next()) {
                 ScriptEventType record = new ScriptEventType();
                 record.setId(resultSet.getLong("id"));
@@ -29,14 +28,16 @@ public class ScriptEventTypeDAO {
                 record.setEventMode(resultSet.getInt("event_mode"));
                 record.setEventId(resultSet.getString("event_id"));
                 record.setTitle(resultSet.getString("title"));
-                result.add(record);
+                list.add(record);
             }
-            return result;
+            return list;
         } catch (SQLException sqle) {
             logger.error(sqle);
             throw sqle;
         }
     }
+
+    public static final String QUERY_FIND_ALL = "select * from script_event_type";
 
     private Connection connection;
     private Logger logger;
