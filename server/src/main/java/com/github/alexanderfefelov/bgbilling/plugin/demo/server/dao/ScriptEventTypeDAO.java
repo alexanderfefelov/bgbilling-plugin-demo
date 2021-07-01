@@ -22,19 +22,23 @@ public class ScriptEventTypeDAO {
         try (Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(QUERY_FIND_ALL);
             while (resultSet.next()) {
-                ScriptEventType record = new ScriptEventType();
-                record.setId(resultSet.getLong("id"));
-                record.setModuleId(resultSet.getString("mid"));
-                record.setEventMode(resultSet.getInt("event_mode"));
-                record.setEventId(resultSet.getString("event_id"));
-                record.setTitle(resultSet.getString("title"));
-                list.add(record);
+                list.add(createRecordFromResultSet(resultSet));
             }
             return list;
         } catch (SQLException sqle) {
             logger.error(sqle);
             throw sqle;
         }
+    }
+
+    private ScriptEventType createRecordFromResultSet(ResultSet resultSet) throws SQLException {
+        ScriptEventType record = new ScriptEventType();
+        record.setId(resultSet.getLong("id"));
+        record.setModuleId(resultSet.getString("mid"));
+        record.setEventMode(resultSet.getInt("event_mode"));
+        record.setEventId(resultSet.getString("event_id"));
+        record.setTitle(resultSet.getString("title"));
+        return record;
     }
 
     public static final String QUERY_FIND_ALL = "select * from script_event_type";
