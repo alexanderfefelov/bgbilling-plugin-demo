@@ -13,9 +13,9 @@ public class ActionScriptEventTypeFindAll extends ActionBase {
     public void doAction() throws Exception {
         ScriptEventTypeDAO dao = new ScriptEventTypeDAO(con, log);
         List<ScriptEventType> list = dao.findAll();
-        Element xml = this.createElement(this.rootNode, "list");
+        Element xml = createElement(rootNode, "list");
         list.forEach(record -> {
-            Element element = this.createElement(xml, "record");
+            Element element = createElement(xml, "record");
             element.setAttribute("id", record.getId().toString());
             element.setAttribute("moduleId", record.getModuleId());
             element.setAttribute("eventMode", record.getEventMode().toString());
